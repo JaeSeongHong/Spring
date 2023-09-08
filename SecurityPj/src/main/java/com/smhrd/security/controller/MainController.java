@@ -29,6 +29,7 @@ public class MainController {
 		String password = (authentication.getCredentials() == null)
 				? "보안을 위한 eraseCredentialsAfterAuthentication 정책에 의해 성공적으로 null 처리 되었습니다."
 				: authentication.getCredentials().toString() + "입니다.";
+		System.out.println(authentication.getCredentials().toString());
 
 		return "안녕하세요, " + authentication.getName() + "님!<br>" + "귀하의 비밀번호는 " + password;
 	}
