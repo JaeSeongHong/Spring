@@ -19,7 +19,7 @@ public class JpaUserDetailsService implements UserDetailsService {
     public CustomUserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
         User user = userRepository.findUserByUsername(username).orElseThrow(() -> new UsernameNotFoundException("조회 실패"));
-                
+                System.out.println(user);
 
         return new CustomUserDetails(user);
     }
