@@ -33,6 +33,7 @@ public class PlayerController {
 		// JsonObject -> put메소드 활용
 		
 		JSONObject player = playerService.PlayerDetail(name);
+		System.out.println(player);
 		
 		return player;
 	}
