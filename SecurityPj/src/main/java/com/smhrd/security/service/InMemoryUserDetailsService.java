@@ -16,6 +16,7 @@ public class InMemoryUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    	
         return users.stream()
                 .filter(user -> user.getUsername().equals(username))
                 .findFirst()
